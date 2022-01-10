@@ -3,7 +3,13 @@ class ArticlesController < ApplicationController
 
   # GET /articles or /articles.json
   def index
-    @articles = Article.all
+    # @articles = Article.all
+
+    @articles = JSON.parse(RestClient::Request.execute(
+      url: "#{base_url}",
+      method: :get,
+      verify_ssl: false
+    ))
   end
 
   # GET /articles/1 or /articles/1.json
@@ -58,6 +64,10 @@ class ArticlesController < ApplicationController
   end
 
   private
+  def base_url
+      'https://api.spaceflightnewsapi.net/v3/articles'
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.find(params[:id])
