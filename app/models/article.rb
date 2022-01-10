@@ -2,6 +2,8 @@ require 'rest-client'
 
 class Article < ApplicationRecord
     include RestClient
+    
+    Article.destroy_all
 
     response = RestClient.get('https://api.spaceflightnewsapi.net/v3/articles')
     articles_array = JSON.parse(response)
