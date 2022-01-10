@@ -32,6 +32,7 @@ gem 'pry'
 gem 'whenever', require: false
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
+gem 'rspec-rails'
 
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps https://github.com/amatsuda/kaminari/wiki
 gem 'kaminari'
