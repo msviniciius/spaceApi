@@ -3,13 +3,13 @@ class ArticlesController < ApplicationController
 
   # GET /articles or /articles.json
   def index
-    # @articles = Article.all
+    @articles = Article.all
 
-    @articles = JSON.parse(RestClient::Request.execute(
-      url: "#{base_url}",
-      method: :get,
-      verify_ssl: false
-    ))
+    # @articles = JSON.parse(RestClient::Request.execute(
+    #   url: "#{base_url}",
+    #   method: :get,
+    #   verify_ssl: false
+    # ))
   end
 
   # GET /articles/1 or /articles/1.json
