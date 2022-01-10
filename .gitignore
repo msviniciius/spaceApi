@@ -19,6 +19,8 @@
 !/tmp/pids/.keep
 
 # Ignore uploaded files in development.
+config/database.yml
+/coverage/*
 /storage/*
 !/storage/.keep
 
