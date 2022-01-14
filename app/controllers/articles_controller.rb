@@ -59,7 +59,7 @@ class ArticlesController < ApplicationController
   end
 
   private
-  def base_url
+    def base_url
       'https://api.spaceflightnewsapi.net/v3/articles'
     end
 

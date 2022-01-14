@@ -2,8 +2,12 @@ require 'rest-client'
 
 class Article < ApplicationRecord
     include RestClient
-
     Article.destroy_all
+
+    validates :title, presence: true
+    validates :url, presence: true
+    validates :imageUrl, presence: true
+    validates :newsSite, presence: true
 
     response = RestClient.get('https://api.spaceflightnewsapi.net/v3/articles')
     articles_array = JSON.parse(response)
