@@ -1,24 +1,51 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+SPACEAPI
 
-Things you may want to cover:
+#Aprendizagem
 
-* Ruby version
+### linguagem, framework e/ou tecnologias usadas:
+    - Ruby
+    - Rails
+    - Bootstrap
+    - Postgrep
+    - VScode
 
-* System dependencies
+### Requisitos
+    - Ruby-2.7.4
+    - Rails 6.0.4
+    - Node v10.19.0
+    - Yarn 1.22.5
 
-* Configuration
+### Instruções de de instalação
+    
+    Instale o Rails
+    - gem install rails -v 6.0.4
+    - rails -v
 
-* Database creation
+    Instale o NodeJS
+    - sudo apt-get install nodejs
+    - nodejs --version
 
-* Database initialization
+    Instale o Yarn
+    - npm install --global yarn
+    - yarn --version
 
-* How to run the test suite
+    Instale o PostgreSQL
+    - sudo apt-get install postgresql postgresql-contrib libpq-dev
+    - psql --version
 
-* Services (job queues, cache servers, search engines, etc.)
+    Instale o gerenciador de pacotes do Ruby:
+    - gem install bundler:2.2.19
 
-* Deployment instructions
+    Inicie a aplicação:
+    - rails s
 
-* ...
+### Forma de uso
+
+    - é realizado um rake db:seed toda vez que o sistema é iniciado, obs: importante resaltar que 
+    ao iniciar o sistema um "destroy_all" é execultado no banco para não ocorrer que o sistema 
+    persistir dados iguais no banco de dados local com base nos dados consumidos pela API. 
+
+
+This is a challenge by Coodesh
